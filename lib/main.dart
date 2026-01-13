@@ -43,15 +43,94 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Center(child: Text(widget.title , style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),
         backgroundColor: Colors.amber,
       ),
-      body:Center(
-        child: Container(
-        width: 100,
-        height: 100,
-        color: Colors.amber,
-        child: Center(child: Text('Demo', style: TextStyle(fontSize: 30 ),)),
-        
-      ) ,
+      body: 
+      Center(
+        child: InkWell(
+          onTap: () => print("tapped on single") ,
+          onDoubleTap: () => print('tapped on double'),
+          child: Container(
+            width: 100,
+            height: 100,
+            color: Colors.amber,
+            child: Center(child: Text('Click Hare', style: TextStyle(fontSize: 12,
+            fontWeight: .bold),)),
+          ),
+        ),
       )
+      // Container(
+      //   child: Column(
+      //     mainAxisAlignment:MainAxisAlignment.spaceBetween ,
+      //     crossAxisAlignment: CrossAxisAlignment.start,
+      //     children: [
+      //       Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //         crossAxisAlignment: CrossAxisAlignment.start,
+      //       children: [ Text('A'),
+      //       Text('A'),
+      //       Text('A'),
+      //       Text('A')],
+      //       ),
+           
+      //       Text('A'),
+      //       Text('A'),
+      //       Text('A'),
+      //       Text('A'),
+        
+      //        Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //         crossAxisAlignment: CrossAxisAlignment.end,
+      //       children: [ 
+      //         Text('A'),
+      //       Text('A'),
+      //       Text('A'),
+      //       Text('A')],
+      //       ),
+      //     ],
+      //   ),
+      // )
+      // Center(
+      //   child: Container(
+      //   width: 200,
+      //   height: 100,
+      //   color: Colors.amber,
+      //   child: Image.asset('assets/images/laptop.jpg'),
+      //   // child: OutlinedButton(
+      //   //   onPressed:(){ print('Clicked');} ,
+      //   //     style:ElevatedButton.styleFrom(
+      //   //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero)
+      //   //     ),
+      //   //   child:  Text('Click Hare', style: MyNewTextStyle(),) ,
+      
+      //   // ),
+      //   // child: Center(child: Text('Demo', style: TextStyle(fontSize: 30 ),)),
+        
+      // ) ,
+      // )
     );
   }
 }
+
+TextStyle MyNewTextStyle({double size = 26.0}){
+  return TextStyle(
+    
+    color: Colors.black54,
+    fontSize: size
+
+
+  );
+}
+
+// class NewWidget extends StatefulWidget {
+//   const NewWidget({super.key});
+
+//   @override
+//   State<NewWidget> createState() => _NewWidgetState();
+// }
+
+// class _NewWidgetState extends State<NewWidget> {
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Placeholder();
+//   }
+// }
