@@ -35,7 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
- 
+
+    var arrNames =['John', 'Bil Gats', 'Donal Tramp', 'Elon Mask', 'Bear Gayles', 'Ambani'];
     return Scaffold(
       appBar: AppBar(
        
@@ -43,20 +44,159 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Center(child: Text(widget.title , style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),
         backgroundColor: Colors.amber,
       ),
-      body: 
-      Center(
-        child: InkWell(
-          onTap: () => print("tapped on single") ,
-          onDoubleTap: () => print('tapped on double'),
-          child: Container(
-            width: 100,
-            height: 100,
-            color: Colors.amber,
-            child: Center(child: Text('Click Hare', style: TextStyle(fontSize: 12,
-            fontWeight: .bold),)),
-          ),
+
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder( itemBuilder: (context, index) => Text(arrNames[index], style: TextStyle(fontSize: 20, fontWeight: .bold),
         ),
-      )
+         itemCount:arrNames.length,
+         itemExtent: 300,
+    
+        
+        ),
+      ),
+      // body:Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: SingleChildScrollView(
+      //     child: Column(
+      //       children: [
+      //         Padding(
+      //           padding: const EdgeInsets.all(8.0),
+      //           child: SingleChildScrollView(
+      //             scrollDirection: Axis.horizontal,
+      //             child: Row(
+      //               children: [
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+                       
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.green,
+      //                 ),
+      //               ],
+      //             ),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+               
+      //           height: 200,
+      //           color: Colors.red,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+              
+      //           height: 200,
+      //           color: Colors.amberAccent,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+
+      //           height: 200,
+      //           color: Colors.indigo,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+              
+      //           height: 200,
+      //           color: Colors.blueGrey,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+               
+      //           height: 200,
+      //           color: Colors.green,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+               
+      //           height: 200,
+      //           color: Colors.red,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+              
+      //           height: 200,
+      //           color: Colors.amberAccent,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+
+      //           height: 200,
+      //           color: Colors.indigo,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+              
+      //           height: 200,
+      //           color: Colors.blueGrey,
+      //         )
+      //       ],
+      //     ),
+      //   ),
+      // ) 
+      // Center(
+      //   child: InkWell(
+      //     onTap: () => print("tapped on single") ,
+      //     onDoubleTap: () => print('tapped on double'),
+      //     child: Container(
+      //       width: 100,
+      //       height: 100,
+      //       color: Colors.amber,
+      //       child: Center(child: Text('Click Hare', style: TextStyle(fontSize: 12,
+      //       fontWeight: .bold),)),
+      //     ),
+      //   ),
+      // )
       // Container(
       //   child: Column(
       //     mainAxisAlignment:MainAxisAlignment.spaceBetween ,
