@@ -36,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    var arrNames =['John', 'Bil Gats', 'Donal Tramp', 'Elon Mask', 'Bear Gayles', 'Ambani'];
     return Scaffold(
       appBar: AppBar(
        
@@ -45,207 +44,110 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.amber,
       ),
 
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView.builder( itemBuilder: (context, index) => Text(arrNames[index], style: TextStyle(fontSize: 20, fontWeight: .bold),
+      body:Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.grey.shade300,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child:SingleChildScrollView (
+            child: Column(
+              children: [
+                Center( 
+                  
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+                Center( 
+                  child: Container(
+                     margin: EdgeInsets.only(bottom: 10),
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
-         itemCount:arrNames.length,
-         itemExtent: 300,
+      )
     
-        
-        ),
-      ),
-      // body:Padding(
-      //   padding: const EdgeInsets.all(8.0),
-      //   child: SingleChildScrollView(
-      //     child: Column(
-      //       children: [
-      //         Padding(
-      //           padding: const EdgeInsets.all(8.0),
-      //           child: SingleChildScrollView(
-      //             scrollDirection: Axis.horizontal,
-      //             child: Row(
-      //               children: [
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-                       
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //               ],
-      //             ),
-      //           ),
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-               
-      //           height: 200,
-      //           color: Colors.red,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-              
-      //           height: 200,
-      //           color: Colors.amberAccent,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-
-      //           height: 200,
-      //           color: Colors.indigo,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-              
-      //           height: 200,
-      //           color: Colors.blueGrey,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-               
-      //           height: 200,
-      //           color: Colors.green,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-               
-      //           height: 200,
-      //           color: Colors.red,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-              
-      //           height: 200,
-      //           color: Colors.amberAccent,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-
-      //           height: 200,
-      //           color: Colors.indigo,
-      //         ),
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-              
-      //           height: 200,
-      //           color: Colors.blueGrey,
-      //         )
-      //       ],
-      //     ),
-      //   ),
-      // ) 
-      // Center(
-      //   child: InkWell(
-      //     onTap: () => print("tapped on single") ,
-      //     onDoubleTap: () => print('tapped on double'),
-      //     child: Container(
-      //       width: 100,
-      //       height: 100,
-      //       color: Colors.amber,
-      //       child: Center(child: Text('Click Hare', style: TextStyle(fontSize: 12,
-      //       fontWeight: .bold),)),
-      //     ),
-      //   ),
-      // )
-      // Container(
-      //   child: Column(
-      //     mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     children: [
-      //       Row(
-      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //         crossAxisAlignment: CrossAxisAlignment.start,
-      //       children: [ Text('A'),
-      //       Text('A'),
-      //       Text('A'),
-      //       Text('A')],
-      //       ),
-           
-      //       Text('A'),
-      //       Text('A'),
-      //       Text('A'),
-      //       Text('A'),
-        
-      //        Row(
-      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //         crossAxisAlignment: CrossAxisAlignment.end,
-      //       children: [ 
-      //         Text('A'),
-      //       Text('A'),
-      //       Text('A'),
-      //       Text('A')],
-      //       ),
-      //     ],
-      //   ),
-      // )
-      // Center(
-      //   child: Container(
-      //   width: 200,
-      //   height: 100,
-      //   color: Colors.amber,
-      //   child: Image.asset('assets/images/laptop.jpg'),
-      //   // child: OutlinedButton(
-      //   //   onPressed:(){ print('Clicked');} ,
-      //   //     style:ElevatedButton.styleFrom(
-      //   //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero)
-      //   //     ),
-      //   //   child:  Text('Click Hare', style: MyNewTextStyle(),) ,
-      
-      //   // ),
-      //   // child: Center(child: Text('Demo', style: TextStyle(fontSize: 30 ),)),
-        
-      // ) ,
-      // )
     );
   }
 }
