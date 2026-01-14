@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.green),
+        textTheme:  TextTheme(
+          headlineLarge: TextStyle(fontFamily: "MainFont", fontSize: 21, fontWeight:.bold),
+        titleSmall:TextStyle( fontSize: 11, fontWeight:.w400 , fontStyle: .italic)
+        )
       ),
       home: const MyHomePage(title: 'Flutter Demo '),
     );
@@ -36,6 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    var arrNames =['Bil Gates','Bil Gates','Bil Gates','Bil Gates','Bil Gates','Bil Gates','Bil Gates',];
+
     return Scaffold(
       appBar: AppBar(
        
@@ -44,107 +50,21 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.amber,
       ),
 
-      body:Container(
-        width: double.infinity,
-        height: double.infinity,
-        color: Colors.grey.shade300,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child:SingleChildScrollView (
-            child: Column(
-              children: [
-                Center( 
-                  
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-                Center( 
-                  child: Container(
-                     margin: EdgeInsets.only(bottom: 10),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30)), color:Colors.amberAccent ),
-                  ),
-                ),
-              ],
+      body:Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.separated(itemBuilder: (context, index) {
+          return ListTile(
+            leading: CircleAvatar(
+           backgroundImage: AssetImage ('assets/images/1.jpg'),
+            backgroundColor: Colors.deepOrangeAccent,
             ),
-          ),
+            title: Text(arrNames[index], style:Theme.of(context).textTheme.headlineLarge,),
+            subtitle: Text('Ceo' , style: Theme.of(context).textTheme.titleSmall!.copyWith(color: Colors.amber),),
+            trailing: Icon(Icons.add),
+          );
+        },
+        itemCount: arrNames.length ,
+        separatorBuilder: (context, index) => Divider(height: 50, thickness: 2,),
         ),
       )
     
