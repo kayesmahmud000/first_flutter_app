@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +61,6 @@ flutter:
     - family: MainFont
       fonts:
         - asset: assets/fonts/BebasNeue-Regular.ttf
-    - family:  SecondFont
+    - family: SecondFont
       fonts:
         - asset: assets/fonts/DancingScript-VariableFont_wght.ttf
