@@ -1,3 +1,6 @@
+import 'package:first_flutter_app/next_screen.dart';
+import 'package:first_flutter_app/widgets/custom_btn.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -41,13 +44,65 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
    
-    var emailText =TextEditingController();
-    var passText = TextEditingController();
+    final num1 =TextEditingController();
+    final num2 = TextEditingController();
      bool isShow = false;
+     
+     var result ='';
   
 
     var time = DateTime.now();
 
+    void addNum (){
+    var number1 = int.parse(num1.text.toString());
+    var number2 = int.parse(num2.text.toString());
+
+    var sum = number1+ number2;
+  
+    setState(() {
+        result = "The sum of  $number1 and $number2 is $sum" ;
+    });
+    }
+    void subNum (){
+    var number1 = int.parse(num1.text.toString());
+    var number2 = int.parse(num2.text.toString());
+
+    var sub = number1-number2;
+
+
+    setState(() {
+        result = "The Sub of  $number1 and $number2 is $sub" ;
+    });
+    }
+    void multiNum (){
+    var number1 = int.parse(num1.text.toString());
+    var number2 = int.parse(num2.text.toString());
+
+    var multi = number1* number2;
+
+
+  
+
+    setState(() {
+        result = "The sum of  $number1 and $number2 is $multi" ;
+    });
+    }
+    void divNum (){
+    var number1 = int.parse(num1.text.toString());
+    var number2 = int.parse(num2.text.toString());
+
+    var div = number1/number2;
+
+    print('$number2 $div $number1');
+
+  
+
+    setState(() {
+        result = "The div of  $number1 and $number2 is $div" ;
+    });
+    }
+    
+    
      void togglePassBtn(){
         setState(() {
           isShow = !isShow;
@@ -66,14 +121,83 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Center(child: Text(widget.title , style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),
         backgroundColor: Colors.amber,
       ),
-      body: Column(
-        children: [
-          TopSection(), 
-          ListSection(),
-          ThirdSection(), 
-          FooterSection(), 
-          ],
-      ),
+      body: Center(child: Container(
+        color: Colors.blueGrey.shade100,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: .center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: num1,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    focusedBorder: OutlineInputBorder(borderSide:  BorderSide(color: Colors.green)),
+                    enabledBorder: OutlineInputBorder(borderSide: BorderSide( color: Colors.black))
+                  ),
+                  
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: num2,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    focusedBorder:OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green)
+                    ),
+                    enabledBorder:OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black)
+                    )
+                  ),
+                
+                ),
+              ),
+              
+              Row(
+                mainAxisAlignment: .spaceAround,
+                children: [
+                  Container(
+                 
+                    child: SquareBtn( btnName: 'Add', textStyle: TextStyle(fontSize: 10, fontWeight: .w200, color: Colors.white), icon: Icon(Icons.add, color: Colors.white,), bgColor: Colors.blue, callback: ()=>addNum(),)),
+                 Container(
+             
+                child: SquareBtn( btnName: 'Sub', textStyle: TextStyle(fontSize: 10, fontWeight: .w200, color: Colors.white), icon: Icon(Icons.remove, color: Colors.white,), bgColor: Colors.red, callback: ()=>subNum())),
+                Container(
+             
+                child: SquareBtn( btnName: 'Multi', textStyle: TextStyle(fontSize: 10, fontWeight: .w200, color: Colors.white), icon: Icon(Icons.close, color: Colors.white,), bgColor: Colors.green, callback: ()=>multiNum())),
+                Container(
+             
+                child: SquareBtn( btnName: 'Div', textStyle: TextStyle(fontSize: 10, fontWeight: .w200, color: Colors.white), icon: Icon(CupertinoIcons.divide, color: Colors.white,), bgColor: Colors.orange, callback: ()=>divNum(),)),
+                ],
+              ),
+        
+              Text('The Result is : $result'),
+              
+              Container(
+                child: SquareBtn(btnName: "Next ",
+                icon: Icon(Icons.arrow_right)
+                , bgColor: Colors.blue,
+                callback: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>NextScreen())),
+                ),
+              )
+            ],
+          ),
+        ),
+      )),
+      // body: Column(
+      //   children: [
+      //     TopSection(), 
+      //     ListSection(),
+      //     ThirdSection(), 
+      //     FooterSection(), 
+      //     ],
+      // ),
      
     
     );
