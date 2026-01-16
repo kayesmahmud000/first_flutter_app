@@ -1,4 +1,5 @@
 import 'package:first_flutter_app/next_screen.dart';
+import 'package:first_flutter_app/splash_screen.dart';
 import 'package:first_flutter_app/widgets/custom_btn.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         titleSmall:TextStyle( fontSize: 11, fontWeight:.w400 , fontStyle: .italic)
         )
       ),
-      home: const MyHomePage(title: 'Flutter Demo '),
+      home:  SplashScreen(),
     );
   }
 }
@@ -177,13 +178,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
         
-              Text('The Result is : $result'),
+             
               
               Container(
-                child: SquareBtn(btnName: "Next ",
-                icon: Icon(Icons.arrow_right)
-                , bgColor: Colors.blue,
-                callback: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>NextScreen())),
+                child: SquareBtn(btnName: "Show result in next page",
+                icon: Icon(Icons.arrow_right, color: Colors.white, size: 20,)
+                , bgColor: Colors.amber,
+                textStyle: TextStyle(color: Colors.white),
+                callback: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NextScreen(result))),
                 ),
               )
             ],
